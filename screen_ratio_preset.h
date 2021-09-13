@@ -3,10 +3,10 @@
 
 #include <QObject>
 
-class ScreenRatio
+class ScreenRatioPreset
 {
 public:
-	ScreenRatio(int firtst_digit, int second_digit);
+	ScreenRatioPreset(int firtst_digit, int second_digit);
 
 	int get_firtst_digit() const noexcept;
 	int get_second_digit() const noexcept;
