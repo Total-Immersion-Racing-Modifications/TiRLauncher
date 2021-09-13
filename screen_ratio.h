@@ -3,14 +3,17 @@
 
 #include <QObject>
 
-class ScreenRatio : public QObject
+class ScreenRatio
 {
-	Q_OBJECT
 public:
-	explicit ScreenRatio(QObject *parent = nullptr);
+	ScreenRatio(int firtst_digit, int second_digit);
 
-signals:
+	int get_firtst_digit() const noexcept;
+	int get_second_digit() const noexcept;
 
+private:
+	const int _firtst_digit;
+	const int _second_digit;
 };
 
 #endif // SCREENRATIO_H
