@@ -8,8 +8,7 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
-        screen_ratio_manager.cpp \
-        screen_ratio_preset.cpp
+        screen_ratio_manager.cpp
 
 RESOURCES += qml.qrc
 
@@ -31,5 +30,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     screen_ratio_manager.h \
-    screen_ratio_preset.h \
     screen_ratio_preset_type.h
