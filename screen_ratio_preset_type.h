@@ -5,7 +5,10 @@
 #include <QObject>
 #include <QString>
 
-enum class ScreenRatioPresetType
+namespace screen_ratio
+{
+
+enum ScreenRatioPresetType
 {
 	Undefined = 0,
 	Ratio_5_4,
@@ -25,5 +28,7 @@ static const std::map<ScreenRatioPresetType, QString> ScreenRatioPresetTypeName
 	{ ScreenRatioPresetType::Ratio_16_9,  QString("16:9") },
 	{ ScreenRatioPresetType::Ratio_21_9,  QString("21:9") },
 };
+
+}
 
 #endif // SCREEN_RATIO_PRESET_TYPEH_H

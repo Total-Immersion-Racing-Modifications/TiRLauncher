@@ -4,11 +4,15 @@
 #include <QLocale>
 #include <QTranslator>
 
+#include "registered_enums.h"
+
 int main(int argc, char *argv[])
 {
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 	QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 #endif
+
+	qmlRegisterType<ScreenRatioPresetType>("launcher.enums", 1, 0, "ScreenRatioPresetType");
 
 	QGuiApplication app(argc, argv);
 
