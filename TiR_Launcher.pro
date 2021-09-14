@@ -8,6 +8,7 @@ CONFIG += c++11
 
 SOURCES += \
         main.cpp \
+        main_window_vm.cpp \
         registered_enums.cpp \
         screen_ratio_manager.cpp
 
@@ -30,6 +31,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
+    main_window_vm.h \
     registered_enums.h \
     screen_ratio_manager.h \
     screen_ratio_preset_type.h
