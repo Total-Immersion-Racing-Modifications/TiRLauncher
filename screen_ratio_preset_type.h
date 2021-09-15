@@ -29,6 +29,16 @@ static const std::map<ScreenRatioPresetType, QString> ScreenRatioPresetTypeName
 	{ ScreenRatioPresetType::Ratio_21_9,  QString("21:9") },
 };
 
+/*QString get_screen_ratio_preset_type_name(ScreenRatioPresetType screen_ratio_preset_type)
+{
+	const auto screen_ratio_preset_type_name = ScreenRatioPresetTypeName.find(screen_ratio_preset_type);
+	if (screen_ratio_preset_type_name == ScreenRatioPresetTypeName.end())
+	{
+		return QObject::tr("Undefined");
+	}
+	return screen_ratio_preset_type_name->second;
+}*/
+
 }
 
 #endif // SCREEN_RATIO_PRESET_TYPEH_H

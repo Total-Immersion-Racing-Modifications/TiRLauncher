@@ -4,29 +4,22 @@
 #include <memory>
 #include <QObject>
 
-#include "screen_ratio_preset_type.h"
-#include "screen_ratio_manager.h"
+#include "screen_ratio_manager_vm.h"
 
 class MainWindowVM : public QObject
 {
 	Q_OBJECT
 
-	using ScreenRatioManagerPtr = std::unique_ptr<screen_ratio::ScreenRatioManager>;
+	using ScreenRatioManagerVMPtr = std::shared_ptr<ScreenRatioManagerVM>;
 
-	Q_PROPERTY(int current_ratio READ get_current_ratio WRITE set_current_ratio NOTIFY currentRatioChanged);
+	Q_PROPERTY(ScreenRatioManagerVM* screen_ratio_manager_vm READ get_screen_ratio_manager_vm_raw CONSTANT)
+
 public:
 	explicit MainWindowVM(QObject *parent = nullptr);
-
-signals:
-	void currentRatioChanged();
+	ScreenRatioManagerVM* get_screen_ratio_manager_vm_raw() const noexcept;
 
 private:
-	void set_current_ratio(int new_ratio) noexcept;
-	int get_current_ratio() const noexcept;
-
-private:
-	screen_ratio::ScreenRatioPresetType _current_ratio;
-	ScreenRatioManagerPtr _ratio_manager;
+	ScreenRatioManagerVMPtr _screen_ratio_manager_vm;
 };
 
 #endif // MAINWINDOWVM_H

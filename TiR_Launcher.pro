@@ -10,7 +10,8 @@ SOURCES += \
         main.cpp \
         main_window_vm.cpp \
         registered_enums.cpp \
-        screen_ratio_manager.cpp
+        screen_ratio_manager.cpp \
+        screen_ratio_manager_vm.cpp
 
 RESOURCES += qml.qrc
 
@@ -34,4 +35,5 @@ HEADERS += \
     main_window_vm.h \
     registered_enums.h \
     screen_ratio_manager.h \
+    screen_ratio_manager_vm.h \
     screen_ratio_preset_type.h

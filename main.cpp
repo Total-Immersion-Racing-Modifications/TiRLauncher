@@ -3,8 +3,10 @@
 
 #include <QLocale>
 #include <QTranslator>
+#include <QQmlContext>
 
 #include "registered_enums.h"
+#include "main_window_vm.h"
 
 int main(int argc, char *argv[])
 {
@@ -13,6 +15,7 @@ int main(int argc, char *argv[])
 #endif
 
 	qmlRegisterType<ScreenRatioPresetType>("launcher.enums", 1, 0, "ScreenRatioPresetType");
+	qmlRegisterType<MainWindowVM>("launcher.vms", 1, 0, "MainWindowVM");
 
 	QGuiApplication app(argc, argv);
 
@@ -34,6 +37,10 @@ int main(int argc, char *argv[])
 			QCoreApplication::exit(-1);
 	}, Qt::QueuedConnection);
 	engine.load(url);
+
+	MainWindowVM main_window_vm;
+
+	engine.rootContext()->setContextProperty("wmain_window_vm", &main_window_vm);
 
 	return app.exec();
 }
