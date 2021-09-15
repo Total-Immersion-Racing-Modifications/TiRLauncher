@@ -10,6 +10,6 @@ ListView
     delegate: RadioButton
     {
         text: r_ratio_type_name
-        onClicked: console.log(r_ratio_type_name)
+        onClicked: screen_ratio_manager_vm.current_ratio = r_ratio_type
     }
 }
