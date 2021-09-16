@@ -23,9 +23,9 @@ void TiRLauncher::start_game()
 {
 	try
 	{
-		QString pathToExe("D:/Program Files (x86)/Akella Games/Total Immersion Racing/" + _tir_proc_name);
-		QDesktopServices::openUrl(QUrl(QUrl::fromLocalFile(pathToExe)));
-		const auto proc_pid = get_pid_by_process_name(L"tir.exe");
+		QString path_to_exe(QDir::currentPath() + "/" + _tir_proc_name);
+		QDesktopServices::openUrl(QUrl(QUrl::fromLocalFile(path_to_exe)));
+		const auto proc_pid = get_pid_by_process_name(path_to_exe.toStdWString().c_str());
 		HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, proc_pid);
 		if (hProcess == NULL)
 		{
