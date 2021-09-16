@@ -38,6 +38,7 @@ HEADERS += \
     screen_ratio/screen_ratio_manager.h \
     screen_ratio_manager_vm.h \
     screen_ratio/screen_ratio_preset_type.h \
-    tir_launcher.h
+    tir_launcher.h \
+    json.hpp
 
 RC_ICONS = tir.ico
