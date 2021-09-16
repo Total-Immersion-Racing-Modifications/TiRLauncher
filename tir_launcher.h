@@ -19,6 +19,7 @@ public:
 
 public slots:
 	void set_screen_ratio_preset(const ScreenRatioPreset& preset) noexcept;
+	void set_path_to_game(const QString& path_to_game) noexcept;
 	void start_game();
 
 private:
@@ -26,6 +27,7 @@ private:
 
 private:
 	const QString _tir_proc_name;
+	QString _path_to_game;
 	ScreenRatioPreset _screen_ratio_preset;
 	QProcessPtr _process;
 };

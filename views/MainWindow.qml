@@ -55,11 +55,26 @@ Rectangle
 
         Button
         {
+            anchors.top: parent.top
+            anchors.right: parent.right
+            anchors.margins: root.button_margin
+            text: qsTr("Choose game folder")
+            onClicked: game_folder_chooser.visible = true
+        }
+
+        Button
+        {
             anchors.margins: root.button_margin
             anchors.bottom: parent.bottom
             anchors.horizontalCenter: parent.horizontalCenter
             text: qsTr("Start")
             onClicked: main_window_vm.startGameRequested()
         }
+    }
+
+    GameFolderChooser
+    {
+        id: game_folder_chooser
+        onAccepted: main_window_vm.gameFolderChoosed(folder.toString())
     }
 }

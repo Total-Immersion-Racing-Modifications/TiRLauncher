@@ -22,6 +22,7 @@ public:
 
 signals:
 	void startGameRequested();
+	void gameFolderChoosed(QString path_to_game_folder);
 
 private slots:
 	void set_screen_ratio_preset();

@@ -1,7 +1,6 @@
 #include "tir_launcher.h"
 
 #include <QDebug>
-#include <QDir>
 #include <string>
 #include <QUrl>
 #include <QDesktopServices>
@@ -19,13 +18,18 @@ void TiRLauncher::set_screen_ratio_preset(const ScreenRatioPreset &preset) noexc
 	_screen_ratio_preset = preset;
 }
 
+void TiRLauncher::set_path_to_game(const QString& path_to_game) noexcept
+{
+	_path_to_game = path_to_game;
+}
+
 void TiRLauncher::start_game()
 {
 	try
 	{
-		QString path_to_exe(QDir::currentPath() + "/" + _tir_proc_name);
+		QString path_to_exe(_path_to_game + "/" + _tir_proc_name);
 		QDesktopServices::openUrl(QUrl(QUrl::fromLocalFile(path_to_exe)));
-		const auto proc_pid = get_pid_by_process_name(path_to_exe.toStdWString().c_str());
+		const auto proc_pid = get_pid_by_process_name(_tir_proc_name.toStdWString().c_str());
 		HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, proc_pid);
 		if (hProcess == NULL)
 		{

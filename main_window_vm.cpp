@@ -6,6 +6,7 @@ MainWindowVM::MainWindowVM(QObject *parent)
 	, _tir_launcher(std::make_unique<TiRLauncher>())
 {
 	connect(this, &MainWindowVM::startGameRequested, _tir_launcher.get(), &TiRLauncher::start_game);
+	connect(this, &MainWindowVM::gameFolderChoosed, _tir_launcher.get(), &TiRLauncher::set_path_to_game);
 	connect(_screen_ratio_manager_vm.get(), &ScreenRatioManagerVM::currentRatioChanged, this, &MainWindowVM::set_screen_ratio_preset);
 }
 
