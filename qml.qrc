@@ -3,5 +3,7 @@
         <file>views/main.qml</file>
         <file>views/MainWindow.qml</file>
         <file>views/RatioList.qml</file>
+        <file>images/banner.png</file>
+        <file>views/Banner.qml</file>
     </qresource>
 </RCC>
