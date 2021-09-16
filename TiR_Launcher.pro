@@ -7,6 +7,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+        config_storage.cpp \
         main.cpp \
         main_window_vm.cpp \
         registered_enums.cpp \
@@ -33,6 +34,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
+    config_storage.h \
     main_window_vm.h \
     registered_enums.h \
     screen_ratio/screen_ratio_manager.h \

@@ -6,6 +6,7 @@
 
 #include "screen_ratio_manager_vm.h"
 #include "tir_launcher.h"
+#include "config_storage.h"
 
 class MainWindowVM : public QObject
 {
@@ -13,6 +14,7 @@ class MainWindowVM : public QObject
 
 	using ScreenRatioManagerVMPtr = std::shared_ptr<ScreenRatioManagerVM>;
 	using TiRLauncherPtr = std::unique_ptr<TiRLauncher>;
+	using ConfigStoragePtr = std::unique_ptr<ConfigStorage>;
 
 	Q_PROPERTY(ScreenRatioManagerVM* screen_ratio_manager_vm READ get_screen_ratio_manager_vm_raw CONSTANT)
 
@@ -30,6 +32,7 @@ private slots:
 private:
 	ScreenRatioManagerVMPtr _screen_ratio_manager_vm;
 	TiRLauncherPtr _tir_launcher;
+	ConfigStoragePtr _config_storage;
 };
 
 #endif // MAINWINDOWVM_H
