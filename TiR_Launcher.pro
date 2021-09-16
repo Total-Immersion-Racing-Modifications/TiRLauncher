@@ -39,3 +39,5 @@ HEADERS += \
     screen_ratio_manager_vm.h \
     screen_ratio/screen_ratio_preset_type.h \
     tir_launcher.h
+
+RC_ICONS = tir.ico
