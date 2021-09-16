@@ -10,7 +10,7 @@ SOURCES += \
         main.cpp \
         main_window_vm.cpp \
         registered_enums.cpp \
-        screen_ratio_manager.cpp \
+        screen_ratio/screen_ratio_manager.cpp \
         screen_ratio_manager_vm.cpp \
         tir_launcher.cpp
 
@@ -35,7 +35,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 HEADERS += \
     main_window_vm.h \
     registered_enums.h \
-    screen_ratio_manager.h \
+    screen_ratio/screen_ratio_manager.h \
     screen_ratio_manager_vm.h \
-    screen_ratio_preset_type.h \
+    screen_ratio/screen_ratio_preset_type.h \
     tir_launcher.h

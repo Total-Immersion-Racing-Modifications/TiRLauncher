@@ -4,7 +4,7 @@
 #include <memory>
 #include <QAbstractListModel>
 
-#include "screen_ratio_manager.h"
+#include "screen_ratio/screen_ratio_manager.h"
 
 class ScreenRatioManagerVM : public QAbstractListModel
 {

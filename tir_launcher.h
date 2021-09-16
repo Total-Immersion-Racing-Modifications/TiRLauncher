@@ -5,7 +5,7 @@
 #include <QProcess>
 #include <windows.h>
 
-#include "screen_ratio_preset_type.h"
+#include "screen_ratio/screen_ratio_preset_type.h"
 
 class TiRLauncher : public QObject
 {

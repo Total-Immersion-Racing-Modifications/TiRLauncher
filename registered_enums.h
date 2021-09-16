@@ -3,7 +3,7 @@
 
 #include <QObject>
 
-#include "screen_ratio_preset_type.h"
+#include "screen_ratio/screen_ratio_preset_type.h"
 
 class ScreenRatioPresetType : public QObject
 {
