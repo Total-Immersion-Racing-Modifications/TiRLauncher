@@ -9,6 +9,9 @@
 TiRLauncher::TiRLauncher()
 	: _tir_proc_name("tir.exe")
 	, _process(std::make_unique<QProcess>())
+	, _first_address(0x51a3c8 + 0x4)
+	, _second_address(0x51a408 + 0x4)
+	, _third_address(0x51a3ec)
 {
 
 }
@@ -27,19 +30,22 @@ void TiRLauncher::start_game()
 {
 	try
 	{
+		if (_path_to_game.length() == 0)
+		{
+			throw std::exception("You didn't choose game folder!");
+		}
 		QString path_to_exe(_path_to_game + "/" + _tir_proc_name);
 		QDesktopServices::openUrl(QUrl(QUrl::fromLocalFile(path_to_exe)));
 		const auto proc_pid = get_pid_by_process_name(_tir_proc_name.toStdWString().c_str());
 		HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, proc_pid);
 		if (hProcess == NULL)
 		{
-			qDebug() << "Can't open the target process!";
 			CloseHandle(hProcess);
-			return;
+			throw std::exception("Can't open the target process!");
 		}
-		WriteProcessMemory(hProcess, (LPVOID)(0x51a3c8 + 0x4), &_screen_ratio_preset.first, sizeof(_screen_ratio_preset.first), 0);
-		WriteProcessMemory(hProcess, (LPVOID)(0x51a408 + 0x4), &_screen_ratio_preset.first, sizeof(_screen_ratio_preset.first), 0);
-		WriteProcessMemory(hProcess, (LPVOID)0x51a3ec, &_screen_ratio_preset.second, sizeof(_screen_ratio_preset.second), 0);
+		WriteProcessMemory(hProcess, (LPVOID)_first_address, &_screen_ratio_preset.first, sizeof(_screen_ratio_preset.first), 0);
+		WriteProcessMemory(hProcess, (LPVOID)_second_address, &_screen_ratio_preset.first, sizeof(_screen_ratio_preset.first), 0);
+		WriteProcessMemory(hProcess, (LPVOID)_third_address, &_screen_ratio_preset.second, sizeof(_screen_ratio_preset.second), 0);
 	}
 	catch (std::exception& e)
 	{

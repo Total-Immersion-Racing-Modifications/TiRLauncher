@@ -30,6 +30,9 @@ private:
 	QString _path_to_game;
 	ScreenRatioPreset _screen_ratio_preset;
 	QProcessPtr _process;
+	DWORD _first_address;
+	DWORD _second_address;
+	DWORD _third_address;
 };
 
 #endif // TIRLAUNCHER_H
