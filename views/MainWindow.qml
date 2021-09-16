@@ -9,7 +9,9 @@ Rectangle
     readonly property int button_margin: 50
     readonly property int ratio_list_margin: 10
     readonly property color text_color: "white"
+
     color: "black"
+
     Banner
     {
         id: banner
@@ -17,6 +19,7 @@ Rectangle
         anchors.left: parent.left
         anchors.right: parent.right
     }
+
     Item
     {
         anchors.top: banner.bottom
@@ -30,6 +33,7 @@ Rectangle
             anchors.top: parent.top
             anchors.bottom: parent.bottom
             anchors.leftMargin: root.ratio_list_margin
+
             Text
             {
                 id: ratio_list_label
@@ -38,6 +42,7 @@ Rectangle
                 text: qsTr("Screen ratio")
                 color: text_color
             }
+
             RatioList
             {
                 anchors.top: ratio_list_label.bottom
@@ -47,6 +52,7 @@ Rectangle
                 text_color: root.text_color
             }
         }
+
         Button
         {
             anchors.margins: root.button_margin
