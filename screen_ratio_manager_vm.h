@@ -11,6 +11,7 @@ class ScreenRatioManagerVM : public QAbstractListModel
 	Q_OBJECT
 
 	using ScreenRatioManagerPtr = std::shared_ptr<screen_ratio::ScreenRatioManager>;
+	using ScreenRatioPreset = std::pair<int, int>;
 
 	Q_PROPERTY(int current_ratio READ get_current_ratio WRITE set_current_ratio NOTIFY currentRatioChanged);
 
@@ -27,6 +28,8 @@ public:
 	int rowCount(const QModelIndex& parent = QModelIndex()) const;
 	QVariant data(const QModelIndex &index, int role) const;
 	QHash<int, QByteArray> roleNames() const;
+
+	ScreenRatioPreset get_current_ratio_preset();
 
 signals:
 	void currentRatioChanged();
