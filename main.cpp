@@ -38,9 +38,5 @@ int main(int argc, char *argv[])
 	}, Qt::QueuedConnection);
 	engine.load(url);
 
-	MainWindowVM main_window_vm;
-
-	engine.rootContext()->setContextProperty("wmain_window_vm", &main_window_vm);
-
 	return app.exec();
 }
