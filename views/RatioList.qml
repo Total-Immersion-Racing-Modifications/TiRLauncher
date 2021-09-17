@@ -14,6 +14,7 @@ ListView
     {
         text: r_ratio_type_name
         onClicked: screen_ratio_manager_vm.current_ratio = r_ratio_type
+        checked: r_choosed
         contentItem: Text {
             text: parent.text
             font: parent.font

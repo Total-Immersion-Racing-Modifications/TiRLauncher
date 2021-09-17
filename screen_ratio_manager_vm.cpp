@@ -45,6 +45,8 @@ QVariant ScreenRatioManagerVM::data(const QModelIndex &index, int role) const
 		}
 		return screen_ratio_preset_type_name->second;
 	}
+	case ChoosedRole:
+		return ratio == _current_ratio;
 	default:
 		return QVariant();
 	}
@@ -55,6 +57,7 @@ QHash<int, QByteArray> ScreenRatioManagerVM::roleNames() const
 	QHash<int, QByteArray> roles = QAbstractListModel::roleNames();
 	roles[RatioTypeRole] = "r_ratio_type";
 	roles[RatioTypeNameRole] = "r_ratio_type_name";
+	roles[ChoosedRole] = "r_choosed";
 	return roles;
 }
 

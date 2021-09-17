@@ -19,7 +19,8 @@ public:
 	enum Roles
 	{
 		RatioTypeRole = Qt::UserRole + 1,
-		RatioTypeNameRole
+		RatioTypeNameRole,
+		ChoosedRole
 	};
 
 	ScreenRatioManagerVM(QObject *parent = nullptr);
