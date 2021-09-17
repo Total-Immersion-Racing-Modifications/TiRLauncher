@@ -19,12 +19,12 @@ public:
 
 public slots:
 	void set_screen_ratio_preset(const ScreenRatioPreset& preset) noexcept;
-	QString get_path_to_game() const noexcept;
 	void set_path_to_game(const QString& path_to_game) noexcept;
 	void start_game();
 
 private:
 	DWORD get_pid_by_process_name(const wchar_t *lpszProcessName);
+	QString get_path_to_game() const noexcept;
 
 private:
 	const QString _tir_proc_name;
