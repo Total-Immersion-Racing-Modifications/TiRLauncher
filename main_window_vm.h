@@ -28,6 +28,8 @@ signals:
 
 private slots:
 	void set_screen_ratio_preset();
+	void save_game_folder(QString path_to_game_folder);
+	void save_screen_ratio();
 
 private:
 	ScreenRatioManagerVMPtr _screen_ratio_manager_vm;

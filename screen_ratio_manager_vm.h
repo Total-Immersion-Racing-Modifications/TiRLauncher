@@ -30,13 +30,11 @@ public:
 	QHash<int, QByteArray> roleNames() const;
 
 	ScreenRatioPreset get_current_ratio_preset();
+	int get_current_ratio() const noexcept;
+	void set_current_ratio(int new_ratio) noexcept;
 
 signals:
 	void currentRatioChanged();
-
-private:
-	void set_current_ratio(int new_ratio) noexcept;
-	int get_current_ratio() const noexcept;
 
 private:
 	screen_ratio::ScreenRatioPresetType _current_ratio;

@@ -21,6 +21,11 @@ void TiRLauncher::set_screen_ratio_preset(const ScreenRatioPreset &preset) noexc
 	_screen_ratio_preset = preset;
 }
 
+QString TiRLauncher::get_path_to_game() const noexcept
+{
+	return _path_to_game;
+}
+
 void TiRLauncher::set_path_to_game(const QString& path_to_game) noexcept
 {
 	_path_to_game = path_to_game;
