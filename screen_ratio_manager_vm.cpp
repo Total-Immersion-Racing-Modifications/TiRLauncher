@@ -61,7 +61,7 @@ QHash<int, QByteArray> ScreenRatioManagerVM::roleNames() const
 	return roles;
 }
 
-ScreenRatioManagerVM::ScreenRatioPreset ScreenRatioManagerVM::get_current_ratio_preset()
+ScreenRatioManagerVM::ScreenRatioPreset ScreenRatioManagerVM::get_current_ratio_preset() const
 {
 	return _ratio_manager->get_ratio_preset(_current_ratio);
 }

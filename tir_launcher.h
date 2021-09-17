@@ -20,7 +20,7 @@ public:
 public slots:
 	void set_screen_ratio_preset(const ScreenRatioPreset& preset) noexcept;
 	void set_path_to_game(const QString& path_to_game) noexcept;
-	void start_game();
+	void start_game() noexcept;
 
 private:
 	DWORD get_pid_by_process_name(const wchar_t *lpszProcessName);

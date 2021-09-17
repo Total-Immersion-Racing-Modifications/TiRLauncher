@@ -30,7 +30,7 @@ public:
 	QVariant data(const QModelIndex &index, int role) const;
 	QHash<int, QByteArray> roleNames() const;
 
-	ScreenRatioPreset get_current_ratio_preset();
+	ScreenRatioPreset get_current_ratio_preset() const;
 	int get_current_ratio() const noexcept;
 	void set_current_ratio(int new_ratio) noexcept;
 

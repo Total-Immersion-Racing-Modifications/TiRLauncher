@@ -27,8 +27,8 @@ signals:
 	void gameFolderChoosed(QString path_to_game_folder);
 
 private slots:
-	void set_screen_ratio_preset();
-	void save_screen_ratio();
+	void set_screen_ratio_preset() noexcept;
+	void save_screen_ratio() noexcept;
 
 private:
 	ScreenRatioManagerVMPtr _screen_ratio_manager_vm;

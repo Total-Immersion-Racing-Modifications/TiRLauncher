@@ -20,12 +20,12 @@ ScreenRatioManagerVM* MainWindowVM::get_screen_ratio_manager_vm_raw() const noex
 	return _screen_ratio_manager_vm.get();
 }
 
-void MainWindowVM::set_screen_ratio_preset()
+void MainWindowVM::set_screen_ratio_preset()  noexcept
 {
 	_tir_launcher->set_screen_ratio_preset(_screen_ratio_manager_vm->get_current_ratio_preset());
 }
 
-void MainWindowVM::save_screen_ratio()
+void MainWindowVM::save_screen_ratio() noexcept
 {
 	_config_storage_vm->save_screen_ratio(_screen_ratio_manager_vm->get_current_ratio());
 }

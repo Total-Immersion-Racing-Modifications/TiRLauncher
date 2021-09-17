@@ -14,12 +14,12 @@ class ConfigStorageVM : public QObject
 public:
 	explicit ConfigStorageVM();
 
-	QString get_game_foler() const;
-	int get_screen_ratio() const;
+	QString get_game_foler() const noexcept;
+	int get_screen_ratio() const noexcept;
 
 public slots:
-	void save_game_folder(QString path_to_game_folder);
-	void save_screen_ratio(int screen_ratio_type);
+	void save_game_folder(QString path_to_game_folder) noexcept;
+	void save_screen_ratio(int screen_ratio_type) noexcept;
 
 private:
 	ConfigStoragePtr _config_storage;

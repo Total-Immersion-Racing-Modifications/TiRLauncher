@@ -31,7 +31,7 @@ void TiRLauncher::set_path_to_game(const QString& path_to_game) noexcept
 	_path_to_game = path_to_game;
 }
 
-void TiRLauncher::start_game()
+void TiRLauncher::start_game() noexcept
 {
 	try
 	{

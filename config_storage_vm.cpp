@@ -12,22 +12,22 @@ ConfigStorageVM::ConfigStorageVM()
 
 }
 
-QString ConfigStorageVM::get_game_foler() const
+QString ConfigStorageVM::get_game_foler() const noexcept
 {
 	return QString::fromStdString(_config_storage->get_string(path_to_game_folder_key));
 }
 
-int ConfigStorageVM::get_screen_ratio() const
+int ConfigStorageVM::get_screen_ratio() const noexcept
 {
 	return _config_storage->get_int(screen_ratio_key);
 }
 
-void ConfigStorageVM::save_game_folder(QString path_to_game_folder)
+void ConfigStorageVM::save_game_folder(QString path_to_game_folder) noexcept
 {
 	_config_storage->set_string(path_to_game_folder_key, path_to_game_folder.toStdString());
 }
 
-void ConfigStorageVM::save_screen_ratio(int screen_ratio_type)
+void ConfigStorageVM::save_screen_ratio(int screen_ratio_type) noexcept
 {
 	_config_storage->set_int(screen_ratio_key, screen_ratio_type);
 }
