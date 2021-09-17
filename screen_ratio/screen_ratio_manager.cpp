@@ -10,7 +10,7 @@ const std::map<ScreenRatioPresetType, ScreenRatioManager::ScreenRatioPreset> scr
 	{ ScreenRatioPresetType::Ratio_5_4, std::make_pair(0x3FE91740, 0x3C8E6080) },
 	{ ScreenRatioPresetType::Ratio_16_10, std::make_pair(0x3FE40000, 0x3CA511D9) },
 	{ ScreenRatioPresetType::Ratio_15_9, std::make_pair(0x3FE38000, 0x3CA51ACA) },
-	{ ScreenRatioPresetType::Ratio_16_9, std::make_pair(0x3FE20000, 0x3cb01d9f) },
+	{ ScreenRatioPresetType::Ratio_16_9, std::make_pair(0x3FE20000, 0x3CB01D9F) },
 	{ ScreenRatioPresetType::Ratio_21_9, std::make_pair(0x3FDC27B9, 0x3CD98D04) }
 };
 } // namespace
