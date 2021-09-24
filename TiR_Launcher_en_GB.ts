@@ -32,7 +32,7 @@
     <name>QObject</name>
     <message>
         <location filename="screen_ratio/screen_ratio_preset_type.h" line="24"/>
-        <location filename="screen_ratio_manager_vm.cpp" line="44"/>
+        <location filename="screen_ratio_manager_vm.cpp" line="48"/>
         <source>Undefined</source>
         <translation type="unfinished"></translation>
     </message>
