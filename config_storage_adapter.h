@@ -1,18 +1,18 @@
-#ifndef CONFIG_STORAGE_VM_H
-#define CONFIG_STORAGE_VM_H
+#ifndef CONFIG_STORAGE_ADAPTER_H
+#define CONFIG_STORAGE_ADAPTER_H
 
 #include "config_storage.h"
 
 #include <QObject>
 
-class ConfigStorageVM : public QObject
+class ConfigStorageAdapter : public QObject
 {
 	Q_OBJECT
 
 	using ConfigStoragePtr = std::unique_ptr<ConfigStorage>;
 
 public:
-	explicit ConfigStorageVM();
+	explicit ConfigStorageAdapter();
 
 	QString get_game_foler() const noexcept;
 	int get_screen_ratio() const noexcept;
@@ -25,4 +25,4 @@ private:
 	ConfigStoragePtr _config_storage;
 };
 
-#endif // CONFIG_STORAGE_VM_H
+#endif // CONFIG_STORAGE_ADAPTER_H

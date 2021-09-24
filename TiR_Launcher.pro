@@ -8,7 +8,7 @@ CONFIG += c++11
 
 SOURCES += \
         config_storage.cpp \
-        config_storage_vm.cpp \
+        config_storage_adapter.cpp \
         main.cpp \
         main_window_vm.cpp \
         registered_enums.cpp \
@@ -38,7 +38,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     config_storage.h \
-    config_storage_vm.h \
+    config_storage_adapter.h \
     main_window_vm.h \
     registered_enums.h \
     screen_ratio/screen_ratio_manager.h \
