@@ -54,7 +54,7 @@ void TiRLauncher::start_game() noexcept
 	}
 	catch (std::exception& e)
 	{
-		qDebug() << e.what();
+		qDebug() << "Failed to start game: " << e.what();
 	}
 }
 

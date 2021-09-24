@@ -26,9 +26,9 @@ public:
 	ScreenRatioManagerVM(QObject *parent = nullptr);
 	ScreenRatioManagerVM(const ScreenRatioManagerVM &other);
 
-	int rowCount(const QModelIndex& parent = QModelIndex()) const;
+	int rowCount(const QModelIndex& parent = QModelIndex()) const noexcept;
 	QVariant data(const QModelIndex &index, int role) const;
-	QHash<int, QByteArray> roleNames() const;
+	QHash<int, QByteArray> roleNames() const noexcept;
 
 	ScreenRatioPreset get_current_ratio_preset() const;
 	int get_current_ratio() const noexcept;
