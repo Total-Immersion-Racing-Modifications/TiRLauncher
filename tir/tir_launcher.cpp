@@ -42,10 +42,10 @@ void TiRLauncher::start_game() noexcept
 		{
 			throw std::exception("You didn't choose game folder!");
 		}
-		QString path_to_exe(_path_to_game + "/" + _tir_proc_name);
+		const QString path_to_exe(_path_to_game + "/" + _tir_proc_name);
 		QDesktopServices::openUrl(QUrl(QUrl::fromLocalFile(path_to_exe)));
 		const auto proc_pid = get_pid_by_process_name(_tir_proc_name.toStdWString().c_str());
-		HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, proc_pid);
+		const HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, proc_pid);
 		if (hProcess == NULL)
 		{
 			CloseHandle(hProcess);
@@ -63,12 +63,11 @@ void TiRLauncher::start_game() noexcept
 
 DWORD TiRLauncher::get_pid_by_process_name(const wchar_t *lpszProcessName)
 {
-	HANDLE hSnapshot;
 	PROCESSENTRY32 pe32 = { 0 };
 
 	pe32.dwSize = sizeof(PROCESSENTRY32);
 
-	hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, NULL);
+	const HANDLE hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, NULL);
 	if (hSnapshot == INVALID_HANDLE_VALUE)
 	{
 		throw std::exception("Can't create the snapshot!");
