@@ -7,6 +7,9 @@
 
 #include "screen_ratio/screen_ratio_preset_type.h"
 
+namespace tir
+{
+
 class TiRLauncher : public QObject
 {
 	Q_OBJECT
@@ -35,5 +38,7 @@ private:
 	DWORD _second_address;
 	DWORD _third_address;
 };
+
+} // namespace tir
 
 #endif // TIRLAUNCHER_H

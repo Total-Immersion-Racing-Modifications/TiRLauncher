@@ -14,7 +14,7 @@ SOURCES += \
         registered_enums.cpp \
         screen_ratio/screen_ratio_manager.cpp \
         screen_ratio_manager_vm.cpp \
-        tir_launcher.cpp
+        tir/tir_launcher.cpp
 
 RESOURCES += qml.qrc
 
@@ -44,7 +44,7 @@ HEADERS += \
     screen_ratio/screen_ratio_manager.h \
     screen_ratio_manager_vm.h \
     screen_ratio/screen_ratio_preset_type.h \
-    tir_launcher.h \
+    tir/tir_launcher.h \
     json.hpp
 
 RC_ICONS = tir.ico

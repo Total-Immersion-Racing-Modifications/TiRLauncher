@@ -1,10 +1,13 @@
 #include "tir_launcher.h"
 
 #include <QDebug>
-#include <string>
-#include <QUrl>
 #include <QDesktopServices>
+#include <QUrl>
+#include <string>
 #include <tlhelp32.h>
+
+namespace tir
+{
 
 TiRLauncher::TiRLauncher()
 	: _tir_proc_name("tir.exe")
@@ -84,3 +87,5 @@ DWORD TiRLauncher::get_pid_by_process_name(const wchar_t *lpszProcessName)
 
 	throw std::exception("Can't find the process!");
 }
+
+} // namespace tir
