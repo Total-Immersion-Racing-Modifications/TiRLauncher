@@ -45,17 +45,17 @@ std::string ConfigStorage::get_string(const std::string& key) const noexcept
 	return j[key].get<std::string>();
 }
 
-int ConfigStorage::get_int(const std::string &key) const noexcept
+int ConfigStorage::get_int(const std::string& key) const noexcept
 {
 	return j[key].get<int>();
 }
 
-void ConfigStorage::set_string(const std::string &key, const std::string &value) noexcept
+void ConfigStorage::set_string(const std::string& key, const std::string& value) noexcept
 {
 	j[key] = value;
 }
 
-void ConfigStorage::set_int(const std::string &key, const int value) noexcept
+void ConfigStorage::set_int(const std::string& key, const int value) noexcept
 {
 	j[key] = value;
 }
