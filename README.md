@@ -14,5 +14,8 @@ How to compile:
 1) compile release exe via MSVC 2019
 2) execute path/to/msvc2019/bin/windeployqt.exe TiR_Launcher.exe
 
-TODO: Make DLL injecting for mods
+How to add mod:
 
+1. open launcher folder
+2. create folder "mods", if there is not this folder
+3. place your mod.dll to this folder

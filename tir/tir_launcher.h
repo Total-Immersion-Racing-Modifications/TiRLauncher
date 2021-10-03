@@ -6,6 +6,7 @@
 #include <windows.h>
 
 #include "screen_ratio/screen_ratio_preset_type.h"
+#include "mods_manager.h"
 
 namespace tir
 {
@@ -16,6 +17,7 @@ class TiRLauncher : public QObject
 
 	using ScreenRatioPreset = std::pair<int, int>;
 	using QProcessPtr = std::unique_ptr<QProcess>;
+	using ModsManagerPtr = std::unique_ptr<ModsManager>;
 
 public:
 	TiRLauncher();
@@ -28,12 +30,15 @@ public slots:
 private:
 	DWORD get_pid_by_process_name(const wchar_t *lpszProcessName);
 	QString get_path_to_game() const noexcept;
+	void inject_mods(const HANDLE hProcess);
+	const LPVOID get_LoadLibraryA();
 
 private:
 	const QString _tir_proc_name;
 	QString _path_to_game;
 	ScreenRatioPreset _screen_ratio_preset;
 	const QProcessPtr _process;
+	const ModsManagerPtr _mods_manager;
 	const DWORD _first_address;
 	const DWORD _second_address;
 	const DWORD _third_address;
