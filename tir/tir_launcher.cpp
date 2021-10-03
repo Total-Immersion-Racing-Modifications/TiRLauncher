@@ -54,6 +54,7 @@ void TiRLauncher::start_game() noexcept
 		WriteProcessMemory(hProcess, (LPVOID)_first_address, &_screen_ratio_preset.first, sizeof(_screen_ratio_preset.first), 0);
 		WriteProcessMemory(hProcess, (LPVOID)_second_address, &_screen_ratio_preset.first, sizeof(_screen_ratio_preset.first), 0);
 		WriteProcessMemory(hProcess, (LPVOID)_third_address, &_screen_ratio_preset.second, sizeof(_screen_ratio_preset.second), 0);
+		CloseHandle(hProcess);
 	}
 	catch (std::exception& e)
 	{
