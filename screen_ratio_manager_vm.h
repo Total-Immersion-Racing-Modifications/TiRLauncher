@@ -39,7 +39,7 @@ signals:
 
 private:
 	screen_ratio::ScreenRatioPresetType _current_ratio;
-	ScreenRatioManagerPtr _ratio_manager;
+	const ScreenRatioManagerPtr _ratio_manager;
 };
 
 Q_DECLARE_METATYPE(ScreenRatioManagerVM)

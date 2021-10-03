@@ -31,9 +31,9 @@ private slots:
 	void save_screen_ratio() noexcept;
 
 private:
-	ScreenRatioManagerVMPtr _screen_ratio_manager_vm;
-	TiRLauncherPtr _tir_launcher;
-	ConfigStorageVMPtr _config_storage_vm;
+	const ScreenRatioManagerVMPtr _screen_ratio_manager_vm;
+	const TiRLauncherPtr _tir_launcher;
+	const ConfigStorageVMPtr _config_storage_vm;
 };
 
 #endif // MAINWINDOWVM_H

@@ -33,10 +33,10 @@ private:
 	const QString _tir_proc_name;
 	QString _path_to_game;
 	ScreenRatioPreset _screen_ratio_preset;
-	QProcessPtr _process;
-	DWORD _first_address;
-	DWORD _second_address;
-	DWORD _third_address;
+	const QProcessPtr _process;
+	const DWORD _first_address;
+	const DWORD _second_address;
+	const DWORD _third_address;
 };
 
 } // namespace tir

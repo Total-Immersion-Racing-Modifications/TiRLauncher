@@ -22,7 +22,7 @@ public slots:
 	void save_screen_ratio(int screen_ratio_type) noexcept;
 
 private:
-	ConfigStoragePtr _config_storage;
+	const ConfigStoragePtr _config_storage;
 };
 
 #endif // CONFIG_STORAGE_ADAPTER_H

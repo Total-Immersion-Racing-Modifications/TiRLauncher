@@ -43,7 +43,7 @@ void TiRLauncher::start_game() noexcept
 			throw std::exception("You didn't choose game folder!");
 		}
 		const QString path_to_exe(_path_to_game + "/" + _tir_proc_name);
-		QDesktopServices::openUrl(QUrl(QUrl::fromLocalFile(path_to_exe)));
+		QDesktopServices::openUrl(QUrl::fromLocalFile(path_to_exe));
 		const auto proc_pid = get_pid_by_process_name(_tir_proc_name.toStdWString().c_str());
 		const HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, proc_pid);
 		if (hProcess == NULL)

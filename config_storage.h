@@ -25,7 +25,7 @@ private:
 	}
 
 private:
-	std::string _config_file;
+	const std::string _config_file;
 	nlohmann::json j;
 };
 
