@@ -7,7 +7,7 @@ const std::string screen_ratio_key("screen_ratio");
 }
 
 ConfigStorageAdapter::ConfigStorageAdapter()
-	: _config_storage(std::make_unique<ConfigStorage>())
+	: _config_storage(std::make_unique<config_storage::ConfigStorage>())
 {
 
 }

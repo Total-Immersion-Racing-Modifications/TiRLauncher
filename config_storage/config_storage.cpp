@@ -7,6 +7,9 @@ namespace
 const std::string default_config("{\"path_to_game_folder\":\"\",\"screen_ratio\":4}");
 }
 
+namespace config_storage
+{
+
 ConfigStorage::ConfigStorage()
 	: _config_file("config.json")
 {
@@ -56,3 +59,5 @@ void ConfigStorage::set_int(const std::string &key, const int value) noexcept
 {
 	j[key] = value;
 }
+
+} // namespace config_storage

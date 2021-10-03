@@ -7,7 +7,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-        config_storage.cpp \
+        config_storage/config_storage.cpp \
         config_storage_adapter.cpp \
         main.cpp \
         main_window_vm.cpp \
@@ -37,14 +37,14 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    config_storage.h \
+    config_storage/config_storage.h \
+    config_storage/json.hpp \
     config_storage_adapter.h \
     main_window_vm.h \
     registered_enums.h \
     screen_ratio/screen_ratio_manager.h \
     screen_ratio_manager_vm.h \
     screen_ratio/screen_ratio_preset_type.h \
-    tir/tir_launcher.h \
-    json.hpp
+    tir/tir_launcher.h
 
 RC_ICONS = tir.ico

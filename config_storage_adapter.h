@@ -1,7 +1,7 @@
 #ifndef CONFIG_STORAGE_ADAPTER_H
 #define CONFIG_STORAGE_ADAPTER_H
 
-#include "config_storage.h"
+#include "config_storage/config_storage.h"
 
 #include <QObject>
 
@@ -9,7 +9,7 @@ class ConfigStorageAdapter : public QObject
 {
 	Q_OBJECT
 
-	using ConfigStoragePtr = std::unique_ptr<ConfigStorage>;
+	using ConfigStoragePtr = std::unique_ptr<config_storage::ConfigStorage>;
 
 public:
 	explicit ConfigStorageAdapter();

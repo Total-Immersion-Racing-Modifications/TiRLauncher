@@ -5,6 +5,9 @@
 
 #include <sys/stat.h>
 
+namespace config_storage
+{
+
 class ConfigStorage
 {
 public:
@@ -28,5 +31,7 @@ private:
 	const std::string _config_file;
 	nlohmann::json j;
 };
+
+} // namespace config_storage
 
 #endif // CONFIGSTORAGE_H
