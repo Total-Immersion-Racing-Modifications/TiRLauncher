@@ -20,8 +20,8 @@ SOURCES += \
 RESOURCES += qml.qrc
 
 TRANSLATIONS += \
-    TiR_Launcher_en_GB.ts \
-    TiR_Launcher_ru_RU.ts
+    languages/TiR_Launcher_en_GB.ts \
+    languages/TiR_Launcher_ru_RU.ts
 
 CONFIG += lrelease
 CONFIG += embed_translations
