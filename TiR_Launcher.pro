@@ -10,10 +10,10 @@ SOURCES += \
         config_storage/config_storage.cpp \
         config_storage/config_storage_adapter.cpp \
         main.cpp \
-        main_window_vm.cpp \
-        registered_enums.cpp \
+        viewmodels/main_window_vm.cpp \
+        viewmodels/registered_enums.cpp \
+        viewmodels/screen_ratio_manager_vm.cpp \
         screen_ratio/screen_ratio_manager.cpp \
-        screen_ratio_manager_vm.cpp \
         tir/mods_manager.cpp \
         tir/tir_launcher.cpp
 
@@ -41,10 +41,10 @@ HEADERS += \
     config_storage/config_storage.h \
     config_storage/json.hpp \
     config_storage/config_storage_adapter.h \
-    main_window_vm.h \
-    registered_enums.h \
+    viewmodels/main_window_vm.h \
+    viewmodels/registered_enums.h \
+    viewmodels/screen_ratio_manager_vm.h \
     screen_ratio/screen_ratio_manager.h \
-    screen_ratio_manager_vm.h \
     screen_ratio/screen_ratio_preset_type.h \
     tir/mods_manager.h \
     tir/tir_launcher.h

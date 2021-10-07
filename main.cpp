@@ -5,8 +5,8 @@
 #include <QTranslator>
 #include <QQmlContext>
 
-#include "registered_enums.h"
-#include "main_window_vm.h"
+#include "viewmodels/registered_enums.h"
+#include "viewmodels/main_window_vm.h"
 
 int main(int argc, char *argv[])
 {
