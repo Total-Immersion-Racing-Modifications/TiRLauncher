@@ -5,11 +5,14 @@
 
 #include <QObject>
 
+namespace config_storage
+{
+
 class ConfigStorageAdapter : public QObject
 {
 	Q_OBJECT
 
-	using ConfigStoragePtr = std::unique_ptr<config_storage::ConfigStorage>;
+	using ConfigStoragePtr = std::unique_ptr<ConfigStorage>;
 
 public:
 	explicit ConfigStorageAdapter();
@@ -24,5 +27,7 @@ public slots:
 private:
 	const ConfigStoragePtr _config_storage;
 };
+
+}
 
 #endif // CONFIG_STORAGE_ADAPTER_H

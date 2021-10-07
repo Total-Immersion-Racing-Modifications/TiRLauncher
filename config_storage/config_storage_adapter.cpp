@@ -6,6 +6,9 @@ const std::string path_to_game_folder_key("path_to_game_folder");
 const std::string screen_ratio_key("screen_ratio");
 }
 
+namespace config_storage
+{
+
 ConfigStorageAdapter::ConfigStorageAdapter()
 	: _config_storage(std::make_unique<config_storage::ConfigStorage>())
 {
@@ -30,4 +33,6 @@ void ConfigStorageAdapter::save_game_folder(QString path_to_game_folder) noexcep
 void ConfigStorageAdapter::save_screen_ratio(int screen_ratio_type) noexcept
 {
 	_config_storage->set_int(screen_ratio_key, screen_ratio_type);
+}
+
 }
